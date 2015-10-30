@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node .",
+    "start": "babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel": "^6.0.12",
+    "babel": "^5.8.29",
     "express": "^4.13.3",
     "lodash": "^3.10.1"
   }
