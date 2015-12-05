@@ -12,7 +12,8 @@
   "dependencies": {
     "babel": "^5.8.29",
     "basic-auth": "^1.0.3",
-    "express": "^4.13.3",
+    "body-parser": "^1.14.1",
+    "express": "*",
     "lodash": "^3.10.1",
     "nodemon": "^1.8.1"
   }
