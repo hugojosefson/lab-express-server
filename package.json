@@ -8,7 +8,8 @@
     "start": "NODE_PATH=\"./src\" node --harmony ./babel.server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Hugo Josefson <hugo@josefson.org>",
+  "repository": "hugojosefson/lab-express-server",
   "license": "MIT",
   "dependencies": {
     "babel": "^6.3.26",
