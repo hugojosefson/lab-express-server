@@ -6,7 +6,9 @@
   "main": "babel.server.js",
   "scripts": {
     "start": "NODE_PATH=\"./src\" node --harmony ./babel.server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Hugo Josefson <hugo@josefson.org>",
   "repository": "hugojosefson/lab-express-server",
@@ -22,6 +24,8 @@
     "is-production": "^1.0.1",
     "lodash": "^3.10.1",
     "nodemon": "^1.8.1",
-    "piping": "^0.3.0"
-  }
+    "piping": "^0.3.0",
+    "snyk": "^1.85.0"
+  },
+  "snyk": true
 }
