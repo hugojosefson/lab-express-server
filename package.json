@@ -20,7 +20,7 @@
     "body-parser": "^1.14.1",
     "express": "^5.0.0-alpha.2",
     "is-production": "^1.0.1",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.11",
     "nodemon": "^1.8.1",
     "piping": "^0.3.0"
   }
