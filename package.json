@@ -1,45 +1,56 @@
 {
   "name": "lab-express-server",
   "private": true,
-  "type": "module",
   "version": "1.0.0",
   "description": "Starting point for doing something with Express.",
-  "main": "src/server.js",
+  "type": "module",
+  "main": "./src/server.mjs",
   "scripts": {
-    "start": "node --experimental-modules --es-module-specifier-resolution=node src/server.js",
-    "dev": "nodemon --exec 'node --experimental-modules --es-module-specifier-resolution=node' src/server.js",
-    "test": "run-s lint",
-    "lint": "standard",
-    "lint-fix": "standard --fix"
-  },
-  "lint-staged": {
-    "*.{mjs,js,jsx}": [
-      "standard --fix",
-      "git add"
-    ]
+    "start": "./src/server.mjs",
+    "dev": "nodemon ./src/server.mjs",
+    "lint": "prettier --write '{,{src,test}{,/**}/}*.{js,mjs,md}'",
+    "test": "run-s lint mocha",
+    "mocha": "mocha",
+    "npm-audit": "npm install --package-lock-only && npm audit; rm package-lock.json"
   },
   "author": "Hugo Josefson <hugo@josefson.org>",
   "repository": "hugojosefson/lab-express-server",
   "license": "MIT",
-  "engines": {
-    "node": "^12"
-  },
-  "dependencies": {
-    "basic-auth": "^2.0.1",
-    "body-parser": "^1.14.1",
-    "express": "^4.17.1",
-    "is-production": "^1.0.1",
-    "nodemon": "^2.0.2"
-  },
-  "devDependencies": {
-    "husky": "^4.2.3",
-    "lint-staged": "^10.1.1",
-    "npm-run-all": "^4.1.5",
-    "standard": "^14.3.3"
+  "mocha": {
+    "spec": "test/*test.mjs"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{mjs,js,jsx}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.14.1",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
